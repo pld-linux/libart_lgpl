@@ -26,7 +26,7 @@ aplikacji. libart renderuje ¶cie¿ki wektorów i tym podobne.
 Summary:	Headers for libart_lgpl
 Summary(pl):	Pliki nag³owkowe libart_lgpl
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Conflicts:	gnome-libs-devel < 1.4.1.2
 Obsoletes:	libart_lgpl2-devel
 
@@ -40,7 +40,7 @@ Pliki nag³ówkowe do biblioteki libart_lgpl.
 Summary:	Static libart_lgpl library
 Summary(pl):	Statyczna biblioteka libart_lgpl
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 Conflicts:	gnome-libs-static < 1.4.1.2
 
 %description static
