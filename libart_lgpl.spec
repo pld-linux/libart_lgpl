@@ -1,8 +1,8 @@
 Summary:	Library of graphics routines used by libgnomecanvas
 Summary(pl):	Biblioteka funkcji graficznych u¿ywanych przez libgnomecanvas
 Name:		libart_lgpl
-Version:	2.3.8
-Release:	2
+Version:	2.3.10
+Release:	1
 License:	LGPL
 Group:		X11/Libraries
 Source0:	ftp://ftp.gnome.org/pub/gnome/pre-gnome2/sources/libart_lgpl/%{name}-%{version}.tar.bz2
@@ -55,7 +55,6 @@ Statyczna wersja biblioteki libart_lgpl.
 %setup -q
 
 %build
-echo 'libart_lgpl_2_la_LIBADD = -lm' >> Makefile.am
 rm -f missing
 %{__libtoolize}
 aclocal
@@ -71,8 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-gzip -9nf AUTHORS ChangeLog NEWS README
-
 %clean
 rm -rf %{buildroot}
 
@@ -81,7 +78,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
