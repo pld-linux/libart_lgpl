@@ -57,7 +57,7 @@ Statyczna wersja biblioteki libart_lgpl.
 %build
 echo 'libart_lgpl_2_la_LIBADD = -lm' >> Makefile.am
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 %{__autoconf}
 %{__automake}
