@@ -57,7 +57,8 @@ Statyczna wersja biblioteki libart_lgpl.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	pkgconfigdir=%{_pkgconfigdir}
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
@@ -77,7 +78,7 @@ rm -rf %{buildroot}
 %attr(755,root,root) %{_bindir}/libart2-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
-%{_libdir}/pkgconfig/*
+%{_pkgconfigdir}/*.pc
 %{_includedir}/*
 
 %files static
