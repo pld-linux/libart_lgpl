@@ -57,7 +57,7 @@ Statyczna wersja biblioteki libart_lgpl.
 %build
 rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
