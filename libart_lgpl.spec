@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.3/%{name}-%{version}.tar.bz2
+# Source0-md5: 6293d81740c8da8186ee9b177786466f
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
