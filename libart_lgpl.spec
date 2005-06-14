@@ -1,3 +1,4 @@
+%bcond_without	static	# don't build static library
 Summary:	Library of graphics routines used by libgnomecanvas
 Summary(pl):	Biblioteka funkcji graficznych u¿ywanych przez libgnomecanvas
 Name:		libart_lgpl
@@ -58,7 +59,8 @@ Statyczna wersja biblioteki libart_lgpl.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	%{!?with_static:--disable-static}
 %{__make}
 
 %install
@@ -87,6 +89,8 @@ rm -rf %{buildroot}
 %{_includedir}/libart-2.0
 %{_pkgconfigdir}/*.pc
 
+%if %{with static}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
