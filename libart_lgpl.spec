@@ -2,7 +2,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library of graphics routines used by libgnomecanvas
-Summary(pl.UTF-8):   Biblioteka funkcji graficznych używanych przez libgnomecanvas
+Summary(pl.UTF-8):	Biblioteka funkcji graficznych używanych przez libgnomecanvas
 Name:		libart_lgpl
 Version:	2.3.17
 Release:	3
@@ -27,7 +27,7 @@ aplikacji. libart renderuje ścieżki wektorów i tym podobne.
 
 %package devel
 Summary:	Headers for libart_lgpl
-Summary(pl.UTF-8):   Pliki nagłowkowe libart_lgpl
+Summary(pl.UTF-8):	Pliki nagłowkowe libart_lgpl
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	libart_lgpl2-devel
@@ -41,7 +41,7 @@ Pliki nagłówkowe do biblioteki libart_lgpl.
 
 %package static
 Summary:	Static libart_lgpl library
-Summary(pl.UTF-8):   Statyczna biblioteka libart_lgpl
+Summary(pl.UTF-8):	Statyczna biblioteka libart_lgpl
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Conflicts:	gnome-libs-static < 1.4.1.2
