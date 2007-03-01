@@ -1,18 +1,19 @@
+#
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library of graphics routines used by libgnomecanvas
 Summary(pl.UTF-8):	Biblioteka funkcji graficznych używanych przez libgnomecanvas
 Name:		libart_lgpl
-Version:	2.3.17
-Release:	3
+Version:	2.3.19
+Release:	1
 License:	LGPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libart_lgpl/2.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	dfca42529393c8a8f59dc4dc10675a46
+# Source0-md5:	ac885805d1918026a18b560f4015bc66
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	libtool
 Obsoletes:	libart_lgpl2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -73,7 +74,7 @@ rm -rf $RPM_BUILD_ROOT
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
