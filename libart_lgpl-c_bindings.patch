@@ -1,0 +1,24 @@
+--- libart_lgpl-2.3.19/art_misc.h.orig	2007-03-31 00:14:21.000000000 +0000
++++ libart_lgpl-2.3.19/art_misc.h	2007-03-31 00:16:41.000000000 +0000
+@@ -34,6 +34,10 @@
+ #include <libart_lgpl/art_config.h>
+ #endif
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif /* __cplusplus */
++
+ void *art_alloc(size_t size);
+ void art_free(void *ptr);
+ void *art_realloc(void *ptr, size_t size);
+@@ -74,10 +78,6 @@
+ #define ART_GNUC_NORETURN
+ #endif  /* !__GNUC__ */
+ 
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+ void ART_GNUC_NORETURN
+ art_die (const char *fmt, ...) ART_GNUC_PRINTF (1, 2);
+ 
