@@ -5,13 +5,12 @@
 Summary:	Library of graphics routines used by libgnomecanvas
 Summary(pl.UTF-8):	Biblioteka funkcji graficznych używanych przez libgnomecanvas
 Name:		libart_lgpl
-Version:	2.3.19
-Release:	2
-License:	LGPL
+Version:	2.3.20
+Release:	1
+License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libart_lgpl/2.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	ac885805d1918026a18b560f4015bc66
-Patch0:		%{name}-c_bindings.patch
+# Source0-md5:	d0ce67f2ebcef1e51a83136c69242a73
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.9
@@ -56,7 +55,6 @@ Statyczna wersja biblioteki libart_lgpl.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -84,18 +82,19 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libart_lgpl_2.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libart_lgpl_2.so.2
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/libart2-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libart_lgpl_2.so
+%{_libdir}/libart_lgpl_2.la
 %{_includedir}/libart-2.0
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/libart-2.0.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libart_lgpl_2.a
 %endif
