@@ -8,7 +8,7 @@ Name:		libart_lgpl
 Version:	2.3.20
 Release:	1
 License:	LGPL v2+
-Group:		X11/Libraries
+Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libart_lgpl/2.3/%{name}-%{version}.tar.bz2
 # Source0-md5:	d0ce67f2ebcef1e51a83136c69242a73
 URL:		http://www.gnome.org/
@@ -29,7 +29,7 @@ aplikacji. libart renderuje ścieżki wektorów i tym podobne.
 %package devel
 Summary:	Headers for libart_lgpl
 Summary(pl.UTF-8):	Pliki nagłowkowe libart_lgpl
-Group:		X11/Development/Libraries
+Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	libart_lgpl2-devel
 Conflicts:	gnome-libs-devel < 1.4.1.2
@@ -43,7 +43,7 @@ Pliki nagłówkowe do biblioteki libart_lgpl.
 %package static
 Summary:	Static libart_lgpl library
 Summary(pl.UTF-8):	Statyczna biblioteka libart_lgpl
-Group:		X11/Development/Libraries
+Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Conflicts:	gnome-libs-static < 1.4.1.2
 
