@@ -6,7 +6,7 @@ Summary:	Library of graphics routines used by libgnomecanvas
 Summary(pl.UTF-8):	Biblioteka funkcji graficznych używanych przez libgnomecanvas
 Name:		libart_lgpl
 Version:	2.3.21
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libart_lgpl/2.3/%{name}-%{version}.tar.bz2
